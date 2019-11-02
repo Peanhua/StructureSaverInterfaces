@@ -24,6 +24,7 @@ Example: https://steamcommunity.com/sharedfiles/filedetails/?id=1828127796
 
 
 **StructureSave**
+
 Inputs: 
 
 Returns: JsonObject data
@@ -32,6 +33,7 @@ This is called when the structure is being saved. It should return a JSON object
 
 
 **StructureRestore**
+
 Inputs: JsonObject data
 
 Returns:
@@ -68,6 +70,7 @@ This is called after the structure has been restored. The function will be given
 **StructureRestoreBeforeItems**
 
 Inputs: PrimalStructure structure, JsonObject data
+
 Returns: 
 
 This is called after the structure is restored but before the inventory items for the structure are restored. The JSON object contains the data that was given by *StructureSave*.
