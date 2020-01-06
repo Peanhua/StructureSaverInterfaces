@@ -3,7 +3,7 @@ Public interfaces for Structure Saver.
 
 These interfaces allows third party mods to integrate themselves with Structure Saver.
 
-For a tutorial about interfaces, check ZenRowe's [url=https://survivetheark.com/index.php?/forums/topic/352467-wildcard-workshop-11-blueprint-interfaces/]Wildcard Workshop #11: Blueprint Interfaces[/url].
+For a tutorial about interfaces, check ZenRowe's [Wildcard Workshop #11: Blueprint Interfaces](https://survivetheark.com/index.php?/forums/topic/352467-wildcard-workshop-11-blueprint-interfaces/).
 
 ## Setting up
 
@@ -101,3 +101,17 @@ Inputs: PrimalStructure Class structure_class
 Returns: Boolean ignore_ground_check
 
 Return True if the ground check for the given structure should be ignored when restoring.
+
+
+
+### Restoring
+
+This is still considered beta, changes to the interface(s) are more than likely:
+
+Files: IRestorer_SS, IRestoringCallback_SS, IStructureSaverManager_SS, Enum_TribeRankSource_SS
+
+IStructureSaverManager_SS = manager = a singleton you obtain first and use for some global stuff
+
+IRestorer_SS = restorer actor = an actor performing the restoring related operations, you can create them by using a function in the manager
+
+IRestoringCallback_SS = callback object = your actor object that has the callbacks defined, you hand reference to this object when creating the restorer actor (it's mandatory)
